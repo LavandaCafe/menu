@@ -52,7 +52,7 @@ body{
     margin-right: 5px;
     padding: 10px 20px;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: visible;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -60,6 +60,12 @@ body{
     scroll-behavior: smooth;
     scroll-snap-type: x proximity;
     overscroll-behavior-x: contain;
+}
+
+.tabs::before,
+.tabs::after{
+    content: "";
+    flex: 0 0 16px;
 }
 
 .tabs::-webkit-scrollbar{
@@ -78,7 +84,10 @@ body{
     background: #e9e3db;
     cursor: pointer;
     white-space: nowrap;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
     flex: 0 0 auto;
     scroll-snap-align: start;
 }
@@ -86,6 +95,8 @@ body{
 .tab.active{
     background: #2b2b2b;
     color: white;
+    transform:scale(1.02);
+    box-shadow: 0 1px 10px rgba(200,200,200,1.15);
 }
 
 .menu{
@@ -155,4 +166,24 @@ body{
     #searchinput{
         width: 50%;
     }
+}
+
+@media(max-width:600px){
+    .menu{
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        display: flex;
+    }
+
+    .card img{
+        width: 40%;
+        height: 150px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border-radius: 30px;
+    }
+
 }

@@ -9,6 +9,12 @@ tabs.forEach(tab => {
         
         tabs.forEach(t => t.classList.remove(`active`));
         tab.classList.add(`active`);
+
+        tab.scrollIntoView({
+            behavior: `smooth`,
+            inline: `center`,
+            block: `nearest`
+        })
     
         const category = tab.dataset.category
 
@@ -44,3 +50,4 @@ window.addEventListener(`scroll`, () => {
 scrollBtn.addEventListener(`click`, () => {
     window.scrollTo({ top: 0, behavior: `smooth`})
 })
+
