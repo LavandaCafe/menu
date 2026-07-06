@@ -172,6 +172,11 @@ body{
     border-radius: 50%;
     cursor: pointer;
     display: none;
+    transition: 0.25s;
+}
+
+.scrolltop:active{
+    background-color: #9e4500;
 }
 
 @media(max-width:900px){
