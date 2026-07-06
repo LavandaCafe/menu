@@ -22,7 +22,7 @@ tabs.forEach(tab => {
             
             const match = category === `all` || card.dataset.category === category;
 
-            card.style.display = match ? `block` : `none`
+            card.style.display = match ? `` : `none`
         })
 
     })

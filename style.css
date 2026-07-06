@@ -175,15 +175,22 @@ body{
 
     .card{
         display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .card img{
-        width: 40%;
-        height: 150px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        border-radius: 30px;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        flex-shrink: 0;
+        margin: 10px 10px;
+        border-radius: 18px;
+    }
+
+    .card-body{
+        flex: 1;
+        padding: 16px;
     }
 
 }
