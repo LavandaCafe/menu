@@ -38,9 +38,15 @@ searchInput.addEventListener(`input`, (e) => {
     const value = e.target.value.toLowerCase();
 
     cards.forEach(card => {
+        const name = card.querySelector(`h3`).textContent.toLowerCase();
+        
+        if(name.includes(value)){
+            card.classList.remove(`hidden`);
+        }else{
+            card.classList.add(`hidden`);
+        }
 
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(value) ? `block` : `none`;
+        card.style.display = name.includes(value) ? `` : `none`;
     })
 })
 
