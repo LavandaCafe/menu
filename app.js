@@ -9,20 +9,25 @@ tabs.forEach(tab => {
         
         tabs.forEach(t => t.classList.remove(`active`));
         tab.classList.add(`active`);
-
+        const category = tab.dataset.category
+        
+        cards.forEach(card => {
+            
+            const match = category === `all` || card.dataset.category === category;
+            
+            card.style.display = match ? `` : `none`
+        })
+        
+        
         tab.scrollIntoView({
             behavior: `smooth`,
             inline: `center`,
             block: `nearest`
         })
-    
-        const category = tab.dataset.category
-
-        cards.forEach(card => {
             
-            const match = category === `all` || card.dataset.category === category;
-
-            card.style.display = match ? `` : `none`
+        window.scrollTo({
+            top: 0,
+            behavior:`smooth`
         })
 
     })
@@ -51,3 +56,12 @@ scrollBtn.addEventListener(`click`, () => {
     window.scrollTo({ top: 0, behavior: `smooth`})
 })
 
+document.querySelectorAll(`.card img`).forEach(img => {
+    if(!img.getAttribute(`src`)){
+        img.src = `assets/images/placeholder.png`
+    }
+
+    img.onerror = function () {
+        this.src = `assets/images/placeholder.png`;
+    }
+})
