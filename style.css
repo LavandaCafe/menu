@@ -196,16 +196,6 @@ main{
     background-color: #9e4500;
 }
 
-@media(max-width:900px){
-    .menu{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    #searchinput{
-        width: 50%;
-    }
-}
-
 .foot{
     display: flex;
     justify-content: center;
@@ -215,6 +205,29 @@ main{
 
 .foot a{
     text-decoration: none;
+    display: flex;
+    margin-top: 15px;
+}
+
+.foot p{
+    margin-top: 6.5px;
+}
+
+.insta{
+    width: 19px;
+    height: 19px;
+    opacity: 40%;
+    margin-top: 10px;
+}
+
+@media(max-width:900px){
+    .menu{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #searchinput{
+        width: 50%;
+    }
 }
 
 @media(max-width:600px){
