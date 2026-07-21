@@ -1,22 +1,22 @@
-const tabs = document.querySelectorAll(`.tab`);
+const tabs = document.querySelectorAll(".tab");
+const searchInput = document.getElementById("searchinput");
+const scrollBtn = document.getElementById("scrollTop");
 
-const searchInput = document.getElementById(`searchinput`);
+let currentCategory = "all";
+let currentSearch = "";
 
-const scrollBtn = document.getElementById(`scrollTop`);
-
-let currentCategory = `all`;
-
-let currentSearch = ``;
-
-let filteredItems = [...menuItems];
-
-function updateMenu(){
+function updateMenu() {
 
     const filteredItems = menuItems.filter(item => {
 
-        const categoryMatch = currentCategory === `all` || item.category === currentCategory;
+        const categoryMatch =
+            currentCategory === "all" ||
+            item.category === currentCategory;
 
-        const searchMatch = item.name.toLowerCase().includes(currentSearch);
+        const searchMatch =
+            item.name
+                .toLowerCase()
+                .includes(currentSearch);
 
         return categoryMatch && searchMatch;
 
@@ -30,8 +30,8 @@ function updateMenu(){
 
 updateMenu();
 
-intitalizeTabs();
+initializeTabs();
 
-intitalizeSearch();
+initializeSearch();
 
-intitializeScrollBtn();
+initializeScrollButton();

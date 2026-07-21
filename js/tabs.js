@@ -1,37 +1,34 @@
-function intitalizeTabs(){
+function initializeTabs() {
 
     tabs.forEach(tab => {
 
-        tab.addEventListener(`click`, () => {
+        tab.addEventListener("click", () => {
 
-            tabs.forEach(t =>
+            tabs.forEach(t => t.classList.remove("active"));
 
-                t.classList.remove(`active`)
-            
-            )
-
-            tab.classList.add(`active`);
+            tab.classList.add("active");
 
             currentCategory = tab.dataset.category;
-            
-            updateMenu();
-        
-            tab.scrollIntoView({
-    
-                behavior: `smooth`,
-                inline: `center`,
-                block: `nearest`
-    
-            })
-            
-            window.scrollTo({
-                
-                top: 0,
-                behavior: `smooth`
-                
-            })
-        })
 
-    })
+            updateMenu();
+
+            tab.scrollIntoView({
+
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest"
+
+            });
+
+            window.scrollTo({
+
+                top: 0,
+                behavior: "smooth"
+
+            });
+
+        });
+
+    });
 
 }

@@ -1,4 +1,6 @@
-function intitializeScrollBtn(){
+const scrollBtn = document.getElementById("scrollTop");
+
+function initializeScrollButton(){
     window.addEventListener(`scroll`, () => {
 
         scrollBtn.style.display = window.scrollY > 300 ? `block` : `none`;

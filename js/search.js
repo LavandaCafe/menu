@@ -1,11 +1,14 @@
-function intitalizeSearch(){
-    
-    searchInput.addEventListener(`input`, e => {
+function initializeSearch() {
 
-        currentSearch = e.target.value.trim().toLowerCase();
+    searchInput.addEventListener("input", e => {
+
+        currentSearch =
+            e.target.value
+                .trim()
+                .toLowerCase();
 
         updateMenu();
 
-    })
+    });
 
 }
