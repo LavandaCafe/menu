@@ -1,6 +1,5 @@
 const tabs = document.querySelectorAll(".tab");
 const searchInput = document.getElementById("searchinput");
-const scrollBtn = document.getElementById("scrollTop");
 
 let currentCategory = "all";
 let currentSearch = "";
