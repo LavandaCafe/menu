@@ -12,11 +12,11 @@ function createPriceHTML(item){
 
     return `
         <div class="price multi-price">
-
+            
             ${item.prices.map(price => `
 
                 <div class="price-option">
-
+                
                     <p class="desc">${price.label}</p>
 
                     <p class="price-value">

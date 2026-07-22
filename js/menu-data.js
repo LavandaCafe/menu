@@ -288,7 +288,7 @@ const menuItems = [
         "available": true,
         "prices": [
             {
-                "label": "",
+                "label": "33cm",
                 "price": 780
             }
         ]
@@ -302,7 +302,7 @@ const menuItems = [
         "available": true,
         "prices": [
             {
-                "label": "",
+                "label": "33cm",
                 "price": 820
             }
         ]
@@ -316,7 +316,7 @@ const menuItems = [
         "available": true,
         "prices": [
             {
-                "label": "",
+                "label": "33cm",
                 "price": 890
             }
         ]
@@ -330,7 +330,7 @@ const menuItems = [
         "available": true,
         "prices": [
             {
-                "label": "",
+                "label": "33cm",
                 "price": 900
             }
         ]
@@ -725,7 +725,7 @@ const menuItems = [
         "name": "آیس کوکی چاکلت",
         "description": "",
         "image": "./assets/images/iceCookieChoco.png",
-        "available": true,
+        "available": false,
         "prices": [
             {
                 "label": "",
