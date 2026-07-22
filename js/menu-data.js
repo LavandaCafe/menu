@@ -470,7 +470,7 @@ const menuItems = [
     {
         "id": "cappuchino",
         "category": "espresso",
-        "name": "کاپوچینو",
+        "name": "کاپوچینو کلاسیک",
         "description": "",
         "image": "./assets/images/cappuchino.png",
         "available": false,
@@ -608,20 +608,6 @@ const menuItems = [
         ]
     },
     {
-        "id": "hot-pistachio",
-        "category": "hotdr",
-        "name": "هات پیستاچیو",
-        "description": "",
-        "image": "",
-        "available": true,
-        "prices": [
-            {
-                "label": "",
-                "price": 275
-            }
-        ]
-    },
-    {
         "id": "black-tea",
         "category": "tea",
         "name": "چای سیاه",
@@ -683,7 +669,7 @@ const menuItems = [
         "name": "آیس امریکانو",
         "description": "",
         "image": "./assets/images/iceAmericano.png",
-        "available": false,
+        "available": true, 
         "prices": [
             {
                 "label": "",
@@ -716,20 +702,6 @@ const menuItems = [
             {
                 "label": "",
                 "price": 225
-            }
-        ]
-    },
-    {
-        "id": "ice-cookie-chocolate",
-        "category": "coldCoffee",
-        "name": "آیس کوکی چاکلت",
-        "description": "",
-        "image": "./assets/images/iceCookieChoco.png",
-        "available": false,
-        "prices": [
-            {
-                "label": "",
-                "price": 235
             }
         ]
     },
