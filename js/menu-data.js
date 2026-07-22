@@ -473,7 +473,7 @@ const menuItems = [
         "name": "کاپوچینو",
         "description": "",
         "image": "./assets/images/cappuchino.png",
-        "available": true,
+        "available": false,
         "prices": [
             {
                 "label": "",
@@ -683,7 +683,7 @@ const menuItems = [
         "name": "آیس امریکانو",
         "description": "",
         "image": "./assets/images/iceAmericano.png",
-        "available": true,
+        "available": false,
         "prices": [
             {
                 "label": "",
