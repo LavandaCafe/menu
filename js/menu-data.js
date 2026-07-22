@@ -473,7 +473,7 @@ const menuItems = [
         "name": "کاپوچینو کلاسیک",
         "description": "",
         "image": "./assets/images/cappuchino.png",
-        "available": false,
+        "available": true,
         "prices": [
             {
                 "label": "",
