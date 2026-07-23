@@ -470,7 +470,7 @@ const menuItems = [
     {
         "id": "cappuchino",
         "category": "espresso",
-        "name": "کاپوچینو",
+        "name": "کاپوچینو کلاسیک",
         "description": "",
         "image": "./assets/images/cappuchino.png",
         "available": true,
