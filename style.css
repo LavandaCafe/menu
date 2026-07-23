@@ -316,6 +316,12 @@ main{
     box-shadow: 0 0 10px #ff4040;
 }
 
+.ico{
+    display: inline;
+    height: 25px;
+    width: 25px;
+}
+
 @keyframes pop{
     from{
         opacity: 0;
@@ -381,6 +387,10 @@ main{
 
     .unavailable-badge{
         margin-right: -280px;
+    }
+
+    .star{
+        margin-right: -5;
     }
 
 }

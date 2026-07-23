@@ -435,7 +435,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 140
+                "price": 160
             }
         ]
     },
@@ -449,7 +449,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 170
+                "price": 190
             }
         ]
     },
@@ -463,7 +463,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 140
+                "price": 170
             }
         ]
     },
@@ -473,11 +473,11 @@ const menuItems = [
         "name": "کاپوچینو",
         "description": "",
         "image": "./assets/images/cappuchino.png",
-        "available": false,
+        "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 170
+                "price": 210
             }
         ]
     },
@@ -491,7 +491,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 195
+                "price": 235
             }
         ]
     },
@@ -505,7 +505,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 220
+                "price": 260
             }
         ]
     },
@@ -519,7 +519,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 225
+                "price": 270
             }
         ]
     },
@@ -533,7 +533,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 130
+                "price": 140
             }
         ]
     },
@@ -547,7 +547,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 185
+                "price": 220
             }
         ]
     },
@@ -561,7 +561,35 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 185
+                "price": 220
+            }
+        ]
+    },
+    {
+        "id": "mix-chocolate",
+        "category": "hotdr",
+        "name": "میکس چاکلت",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 220
+            }
+        ]
+    },
+    {
+        "id": "pink-chocolate",
+        "category": "hotdr",
+        "name": "پینک چاکلت",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 240
             }
         ]
     },
@@ -575,7 +603,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 175
+                "price": 230
             }
         ]
     },
@@ -589,7 +617,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 250
+                "price": 270
             }
         ]
     },
@@ -603,21 +631,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 250
-            }
-        ]
-    },
-    {
-        "id": "hot-pistachio",
-        "category": "hotdr",
-        "name": "هات پیستاچیو",
-        "description": "",
-        "image": "",
-        "available": true,
-        "prices": [
-            {
-                "label": "",
-                "price": 275
+                "price": 270
             }
         ]
     },
@@ -631,7 +645,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 60
+                "price": 80
             }
         ]
     },
@@ -683,11 +697,11 @@ const menuItems = [
         "name": "آیس امریکانو",
         "description": "",
         "image": "./assets/images/iceAmericano.png",
-        "available": false,
+        "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 140
+                "price": 170
             }
         ]
     },
@@ -701,7 +715,35 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 215
+                "price": 235
+            }
+        ]
+    },
+    {
+        "id": "ice-car-mack",
+        "category": "coldCoffee",
+        "name": "آیس کارامل ماکیاتو",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 280
+            }
+        ]
+    },
+    {
+        "id": "ice-lat-berry",
+        "category": "coldCoffee",
+        "name": "آیس لته توت فرنگی",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 280
             }
         ]
     },
@@ -715,21 +757,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 225
-            }
-        ]
-    },
-    {
-        "id": "ice-cookie-chocolate",
-        "category": "coldCoffee",
-        "name": "آیس کوکی چاکلت",
-        "description": "",
-        "image": "./assets/images/iceCookieChoco.png",
-        "available": false,
-        "prices": [
-            {
-                "label": "",
-                "price": 235
+                "price": 245
             }
         ]
     },
@@ -743,7 +771,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 230
+                "price": 260
             }
         ]
     },
@@ -757,7 +785,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 280
+                "price": 330
             }
         ]
     },
@@ -771,7 +799,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 180
+                "price": 210
             }
         ]
     },
@@ -785,7 +813,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 190
+                "price": 220
             }
         ]
     },
@@ -799,7 +827,35 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 215
+                "price": 240
+            }
+        ]
+    },
+    {
+        "id": "blue-mojito",
+        "category": "colddr",
+        "name": "بلو موهیتو",
+        "description": "",
+        "image": ".",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 250
+            }
+        ]
+    },
+    {
+        "id": "blue-oisin",
+        "category": "colddr",
+        "name": "بلو اوشن",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 280
             }
         ]
     },
@@ -813,7 +869,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 210
+                "price": 250
             }
         ]
     },
@@ -827,7 +883,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 245
+                "price": 260
             }
         ]
     },
@@ -841,7 +897,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 210
+                "price": 250
             }
         ]
     },
@@ -855,7 +911,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 230
+                "price": 260
             }
         ]
     },
@@ -869,7 +925,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 330
+                "price": 320
             }
         ]
     },
@@ -883,7 +939,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 290
+                "price": 330
             }
         ]
     },
@@ -911,7 +967,35 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 290
+                "price": 300
+            }
+        ]
+    },
+    {
+        "id": "strawberry-shake",
+        "category": "shake",
+        "name": "شیک توت فرنگی",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 310
+            }
+        ]
+    },
+    {
+        "id": "cafe-gla",
+        "category": "shake",
+        "name": "کافه گلاسه",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 310
             }
         ]
     },
@@ -925,7 +1009,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 230
+                "price": 270
             }
         ]
     },
@@ -939,7 +1023,7 @@ const menuItems = [
         "prices": [
             {
                 "label": "",
-                "price": 250
+                "price": 290
             }
         ]
     },
