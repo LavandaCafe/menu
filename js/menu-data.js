@@ -284,7 +284,7 @@ const menuItems = [
         "category": "pizzaIT",
         "name": "پپرونی",
         "description": "پپرونی، سس مخصوص، میکس پنیر پیتزا، هالوپینو",
-        "image": "",
+        "image": "./assets/images/pep.jpg",
         "available": true,
         "prices": [
             {
@@ -326,7 +326,7 @@ const menuItems = [
         "category": "pizzaIT",
         "name": "سیرو استیک",
         "description": "سس سیر، میکس پنیر پیتزا، اسلایس استیک",
-        "image": "",
+        "image": "./assets/images/garsteak.jpg",
         "available": true,
         "prices": [
             {
@@ -430,7 +430,7 @@ const menuItems = [
         "category": "espresso",
         "name": "اسپرسو",
         "description": "",
-        "image": "",
+        "image": "./assets/images/robust.png",
         "available": true,
         "prices": [
             {
@@ -724,7 +724,7 @@ const menuItems = [
         "category": "coldCoffee",
         "name": "آیس کارامل ماکیاتو",
         "description": "",
-        "image": "",
+        "image": "./assets/images/icecarm.jpg",
         "available": true,
         "prices": [
             {
@@ -836,7 +836,7 @@ const menuItems = [
         "category": "colddr",
         "name": "بلو موهیتو",
         "description": "",
-        "image": ".",
+        "image": "./assets/images/blumoj.png",
         "available": true,
         "prices": [
             {
@@ -850,7 +850,7 @@ const menuItems = [
         "category": "colddr",
         "name": "بلو اوشن",
         "description": "",
-        "image": "",
+        "image": "./assets/images/bluocean.png",
         "available": true,
         "prices": [
             {
