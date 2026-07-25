@@ -4,7 +4,7 @@ const menuItems = [
         "category": "salad",
         "name": "فرنچ فرایز ساده",
         "description": "سیب خلالی ساده",
-        "image": "",
+        "image": "./assets/images/fries.jpg",
         "available": true,
         "prices": [
             {
@@ -18,7 +18,7 @@ const menuItems = [
         "category": "salad",
         "name": "دیپ فرایز",
         "description": "سیب خلالی، سس دیپ",
-        "image": "",
+        "image": "./assets/images/dipfries.jpg",
         "available": true,
         "prices": [
             {
@@ -32,7 +32,7 @@ const menuItems = [
         "category": "salad",
         "name": "آلفردو فرایز",
         "description": "سیب خلالی، سس قارچ",
-        "image": "",
+        "image": "./assets/images/alfries.jpg",
         "available": true,
         "prices": [
             {
@@ -46,7 +46,7 @@ const menuItems = [
         "category": "salad",
         "name": "سیب تنوری",
         "description": "سیب 8 پر",
-        "image": "",
+        "image": "./assets/images/tanoori.jpg",
         "available": true,
         "prices": [
             {
@@ -60,7 +60,7 @@ const menuItems = [
         "category": "salad",
         "name": "سیب تنوری آلفردو",
         "description": "سیب 8 پر، سس قارچ",
-        "image": "",
+        "image": "./assets/images/alftan.jpg",
         "available": true,
         "prices": [
             {
@@ -74,7 +74,7 @@ const menuItems = [
         "category": "salad",
         "name": "نان سیر",
         "description": "",
-        "image": "",
+        "image": "./assets/images/garlicb.jpg",
         "available": true,
         "prices": [
             {
@@ -88,7 +88,7 @@ const menuItems = [
         "category": "salad",
         "name": "سالاد سزار گریل",
         "description": "مرغ گریل، کاهو پیچ، سس سزار، کاپاریس، بروکلی،گوجه گیلاسی، زیتون، نان تست",
-        "image": "",
+        "image": "./assets/images/cesar.jpg",
         "available": true,
         "prices": [
             {
@@ -102,7 +102,7 @@ const menuItems = [
         "category": "salad",
         "name": "سالاد رژیمی",
         "description": "مرغ گریل، قارچ تنوری، سیب تنوری، نان تست، زیتون، کاهوپیچ",
-        "image": "",
+        "image": "./assets/images/dietsal.jpg",
         "available": true,
         "prices": [
             {
@@ -172,7 +172,7 @@ const menuItems = [
         "category": "pasta",
         "name": "چیکن آلفردو",
         "description": "پنه - فتوچینی",
-        "image": "",
+        "image": "./assets/images/alfredopast.jpg",
         "available": true,
         "prices": [
             {
@@ -186,7 +186,7 @@ const menuItems = [
         "category": "pasta",
         "name": "چیکن پستو",
         "description": "پنه - فتوچینی",
-        "image": "",
+        "image": "./assets/images/chickenpesto.jpg",
         "available": true,
         "prices": [
             {
@@ -214,7 +214,7 @@ const menuItems = [
         "category": "burger",
         "name": "برگر کلاسیک",
         "description": "150 گرم گوشت گوساله، کاهو، گوجه، سس مخصوص",
-        "image": "",
+        "image": "./assets/images/classicburg.jpg",
         "available": true,
         "prices": [
             {
@@ -228,7 +228,7 @@ const menuItems = [
         "category": "burger",
         "name": "چیز برگر",
         "description": "150 گرم گوشت گوساله، کاهو، گوجه، سس مخصوص، پنیر ورقه ای",
-        "image": "",
+        "image": "./assets/images/cheesburg.jpg",
         "available": true,
         "prices": [
             {
@@ -242,7 +242,7 @@ const menuItems = [
         "category": "burger",
         "name": "ماشروم برگر",
         "description": "150 گرم گوشت گوساله، سس قارچ، کاهو، گوجه",
-        "image": "",
+        "image": "./assets/images/mushburg.jpg",
         "available": true,
         "prices": [
             {
@@ -256,7 +256,7 @@ const menuItems = [
         "category": "burger",
         "name": "رست برگر",
         "description": "150 گرم گوشت گوساله، سس قارچ، رست بیف، کاهو، گوجه، سس مخصوص",
-        "image": "",
+        "image": "./assets/images/roastburg.jpg",
         "available": true,
         "prices": [
             {
@@ -270,7 +270,7 @@ const menuItems = [
         "category": "burger",
         "name": "رست چیکن",
         "description": "150 گرم شنیسل مرغ، سس قارچ، رست بیف، کاهو، گوجه، سس مخصوص",
-        "image": "",
+        "image": "./assets/images/roastchic.jpg",
         "available": true,
         "prices": [
             {
@@ -340,7 +340,7 @@ const menuItems = [
         "category": "pizzaUS",
         "name": "پولد بیف",
         "description": "گوشت گوساله پولد شده، قارچ، پنیر پیتزا",
-        "image": "",
+        "image": "./assets/images/pulled.jpg",
         "available": true,
         "prices": [
             {
@@ -368,7 +368,7 @@ const menuItems = [
                 "price": 680
             }
         ],
-        "image": "",
+        "image": "./assets/images/qarchogoosht.jpg",
         "available": true
     },
     {
@@ -376,7 +376,7 @@ const menuItems = [
         "category": "pizzaUS",
         "name": "دالاس",
         "description": "پولد بیف، سس چدار، قارچ، سس مخصوص، بیکن، میکس پنیر پیتزا",
-        "image": "",
+        "image": "./assets/images/dallas.jpg",
         "available": true,
         "prices": [
             {
@@ -394,7 +394,7 @@ const menuItems = [
         "category": "pizzaUS",
         "name": "شیکاگو",
         "description": "گوشت چرخ شده، قارچ، پنیر پیتزا، بیکن، سس مخصوص",
-        "image": "",
+        "image": "./assets/images/chicago.jpg",
         "available": true,
         "prices": [
             {
@@ -752,7 +752,7 @@ const menuItems = [
         "category": "coldCoffee",
         "name": "آیس موکا",
         "description": "",
-        "image": "",
+        "image": "./assets/images/icemocha.jpg",
         "available": true,
         "prices": [
             {
@@ -864,7 +864,7 @@ const menuItems = [
         "category": "colddr",
         "name": "مانگریپ",
         "description": "انبه، پرتقال تو سرخ، پیناکولادا",
-        "image": "",
+        "image": "./assets/images/mangrape.png",
         "available": true,
         "prices": [
             {
@@ -920,7 +920,7 @@ const menuItems = [
         "category": "shake",
         "name": "شیک لوتوس",
         "description": "",
-        "image": "",
+        "image": "./assets/images/lotus.png",
         "available": true,
         "prices": [
             {
