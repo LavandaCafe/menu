@@ -112,10 +112,66 @@ const menuItems = [
         ]
     },
     {
-        "id": "chicken-alfredo-penini",
+        "id": "chorizobbq",
         "category": "penini",
-        "name": "پنینی چیکن آلفردو",
-        "description": "",
+        "name": "چوریتزو باربیکیو",
+        "description": "160 گرم چوریزو، نان چاپاتا، سس باربیکیو، دورچین",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 610
+            }
+        ]
+    },
+    {
+        "id": "turkey-pesto-penini",
+        "category": "penini",
+        "name": "بوقلمون پستو",
+        "description": "بیکن بوقلمون، نان چاپاتا، سس پستو",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 610
+            }
+        ]
+    },
+    {
+        "id": "pulledblucheese",
+        "category": "penini",
+        "name": "پولد بلوچیز",
+        "description": "گوشت گوساله، نان چاپاتا، قارچ، خامه",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 890
+            }
+        ]
+    },
+    {
+        "id": "salami",
+        "category": "penini",
+        "name": "سالامی سوجوک",
+        "description": "سالامی، نان چاپاتا، سوجوک، سس سالسا",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 510
+            }
+        ]
+    },
+    {
+        "id": "baconsalsa",
+        "category": "britosh",
+        "name": "بیکن سالسا",
+        "description": "بیکن گوساله، سس سالسا، دورچین",
         "image": "",
         "available": true,
         "prices": [
@@ -126,44 +182,58 @@ const menuItems = [
         ]
     },
     {
-        "id": "hot-bacon-penini",
-        "category": "penini",
-        "name": "پنینی هات بیکن",
-        "description": "",
+        "id": "chorizopesto",
+        "category": "britosh",
+        "name": "چوریتزو پستو",
+        "description": "چوریتزو، سس پستو، دورچین",
         "image": "",
         "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 600
+                "price": 800
             }
         ]
     },
     {
-        "id": "turkey-pesto-penini",
-        "category": "penini",
-        "name": "پنینی بوقلمون پستو",
-        "description": "",
+        "id": "pulledwillie",
+        "category": "britosh",
+        "name": "پولد ویلی",
+        "description": "گوشت گوساله، قارچ، دورچین",
         "image": "",
         "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 680
+                "price": 880
             }
         ]
     },
     {
-        "id": "pulled-beef-penini",
-        "category": "penini",
-        "name": "پنینی پولد بیف",
-        "description": "",
+        "id": "chickenhot",
+        "category": "britosh",
+        "name": "چیکن هات",
+        "description": "شنیسل مرغ، قارچ، دیپ، دورچین",
         "image": "",
         "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 810
+                "price": 720
+            }
+        ]
+    },
+    {
+        "id": "smokedsalami",
+        "category": "britosh",
+        "name": "سالامی اسموکی",
+        "description": "سالامی، سالسا، دورچین",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 590
             }
         ]
     },
@@ -171,7 +241,7 @@ const menuItems = [
         "id": "chicken-alfredo-pasta",
         "category": "pasta",
         "name": "چیکن آلفردو",
-        "description": "پنه - فتوچینی",
+        "description": "مرغ، قارچ، پنه، سس آلفردو",
         "image": "./assets/images/alfredopast.jpg",
         "available": true,
         "prices": [
@@ -185,22 +255,8 @@ const menuItems = [
         "id": "chicken-pesto-pasta",
         "category": "pasta",
         "name": "چیکن پستو",
-        "description": "پنه - فتوچینی",
+        "description": "مرغ، قارچ، پنه، سس پستو",
         "image": "./assets/images/chickenpesto.jpg",
-        "available": true,
-        "prices": [
-            {
-                "label": "",
-                "price": 610
-            }
-        ]
-    },
-    {
-        "id": "pepe-pasta",
-        "category": "pasta",
-        "name": "پپه پاستا",
-        "description": "پپرونی، سس پپه، پنه",
-        "image": "",
         "available": true,
         "prices": [
             {
@@ -210,25 +266,25 @@ const menuItems = [
         ]
     },
     {
-        "id": "classic-burger",
-        "category": "burger",
-        "name": "برگر کلاسیک",
-        "description": "150 گرم گوشت گوساله، کاهو، گوجه، سس مخصوص",
-        "image": "./assets/images/classicburg.jpg",
+        "id": "arabiata",
+        "category": "pasta",
+        "name": "آرابیاتا",
+        "description": "پنه، هالوپینو، زیتون سیاه، سس مارینارا",
+        "image": "",
         "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 520
+                "price": 480
             }
         ]
     },
     {
-        "id": "cheese-burger",
+        "id": "classic-burger",
         "category": "burger",
-        "name": "چیز برگر",
-        "description": "150 گرم گوشت گوساله، کاهو، گوجه، سس مخصوص، پنیر ورقه ای",
-        "image": "./assets/images/cheesburg.jpg",
+        "name": "برگر کلاسیک",
+        "description": "دنده، نان برگر، گوجه، کاهو، سیب ساده",
+        "image": "./assets/images/classicburg.jpg",
         "available": true,
         "prices": [
             {
@@ -238,16 +294,44 @@ const menuItems = [
         ]
     },
     {
+        "id": "cheese-burger",
+        "category": "burger",
+        "name": "چیز برگر",
+        "description": "دنده، نان برگر، چدار، گوجه، کاهو، سیب ساده",
+        "image": "./assets/images/cheesburg.jpg",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 600
+            }
+        ]
+    },
+    {
+        "id": "onionburg",
+        "category": "burger",
+        "name": "آنیون برگر",
+        "description": "دنده، نان برگر، پیاز، گوجه، کاهو، سیب ساده",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 610
+            }
+        ]
+    },
+    {
         "id": "mushroom-burger",
         "category": "burger",
         "name": "ماشروم برگر",
-        "description": "150 گرم گوشت گوساله، سس قارچ، کاهو، گوجه",
+        "description": "دنده، نان برگر، قارچ، پنیر دیپ و چدار، گوجه، کاهو، سیب ساده",
         "image": "./assets/images/mushburg.jpg",
         "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 580
+                "price": 640
             }
         ]
     },
@@ -255,27 +339,13 @@ const menuItems = [
         "id": "roast-burger",
         "category": "burger",
         "name": "رست برگر",
-        "description": "150 گرم گوشت گوساله، سس قارچ، رست بیف، کاهو، گوجه، سس مخصوص",
+        "description": "دنده، رست بیف، نان برگر، قارچ، دیپ و چدار، گوجه، کاهو، سیب ساده",
         "image": "./assets/images/roastburg.jpg",
         "available": true,
         "prices": [
             {
                 "label": "",
-                "price": 620
-            }
-        ]
-    },
-    {
-        "id": "roast-chicken",
-        "category": "burger",
-        "name": "رست چیکن",
-        "description": "150 گرم شنیسل مرغ، سس قارچ، رست بیف، کاهو، گوجه، سس مخصوص",
-        "image": "./assets/images/roastchic.jpg",
-        "available": true,
-        "prices": [
-            {
-                "label": "",
-                "price": 580
+                "price": 880
             }
         ]
     },
@@ -283,13 +353,13 @@ const menuItems = [
         "id": "peperoni",
         "category": "pizzaIT",
         "name": "پپرونی",
-        "description": "پپرونی، سس مخصوص، میکس پنیر پیتزا، هالوپینو",
+        "description": "پپرونی، خمیر، پنیر پیتزا",
         "image": "./assets/images/pep.jpg",
         "available": true,
         "prices": [
             {
                 "label": "33cm",
-                "price": 780
+                "price": 850
             }
         ]
     },
@@ -297,13 +367,13 @@ const menuItems = [
         "id": "chicken-pesto-pizza",
         "category": "pizzaIT",
         "name": "چیکن پستو",
-        "description": "سس پستو، میکس پنیر پیتزا، شنیسل مرغ",
+        "description": "مرغ، سس پستو، پنیر پیتزا",
         "image": "",
         "available": true,
         "prices": [
             {
                 "label": "33cm",
-                "price": 820
+                "price": 850
             }
         ]
     },
@@ -311,27 +381,55 @@ const menuItems = [
         "id": "turkey-pesto-pizza",
         "category": "pizzaIT",
         "name": "بوقلمون پستو",
-        "description": "سس پستو،میکس پنیر پیتزا، شنیسل مرغ، بیکن بوقلمون",
+        "description": "بیکن بوقلمون، سس پستو، پنیر پیتزا",
         "image": "",
         "available": true,
         "prices": [
             {
                 "label": "33cm",
-                "price": 890
+                "price": 980
             }
         ]
     },
     {
-        "id": "garlic-steak-pizza",
+        "id": "mexicana",
         "category": "pizzaIT",
-        "name": "سیرو استیک",
-        "description": "سس سیر، میکس پنیر پیتزا، اسلایس استیک",
+        "name": "مکزیکانا",
+        "description": "",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "33cm",
+                "price": 980
+            }
+        ]
+    },
+    {
+        "id": "cicil",
+        "category": "pizzaIT",
+        "name": "سیسیل",
+        "description": "مرغ، سس مارینارا، پنیر پیتزا",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "33cm",
+                "price": 850
+            }
+        ]
+    },
+    {
+        "id": "jano",
+        "category": "pizzaIT",
+        "name": "جانو",
+        "description": "راسته استیک، سس مارینارا، پنیر پیتزا",
         "image": "./assets/images/garsteak.jpg",
         "available": true,
         "prices": [
             {
                 "label": "33cm",
-                "price": 900
+                "price": 990
             }
         ]
     },
@@ -345,11 +443,11 @@ const menuItems = [
         "prices": [
             {
                 "label": "35cm",
-                "price": 920
+                "price": 1200
             },
             {
                 "label": "25cm",
-                "price": 680
+                "price": 920
             }
         ]
     },
@@ -361,11 +459,11 @@ const menuItems = [
         "prices": [
             {
                 "label": "35cm",
-                "price": 920
+                "price": 1100
             },
             {
                 "label": "25cm",
-                "price": 680
+                "price": 900
             }
         ],
         "image": "./assets/images/qarchogoosht.jpg",
@@ -374,36 +472,36 @@ const menuItems = [
     {
         "id": "dallas",
         "category": "pizzaUS",
-        "name": "دالاس",
-        "description": "پولد بیف، سس چدار، قارچ، سس مخصوص، بیکن، میکس پنیر پیتزا",
+        "name": "دالاس دیپ دیش",
+        "description": "گوشت گوساله، قارچ، بیکن، پنیر پیتزا",
         "image": "./assets/images/dallas.jpg",
         "available": true,
         "prices": [
             {
                 "label": "35cm",
-                "price": 1050
+                "price": 1300
             },
             {
                 "label": "25cm",
-                "price": 700
+                "price": 980
             }
         ]
     },
     {
         "id": "chicago",
         "category": "pizzaUS",
-        "name": "شیکاگو",
-        "description": "گوشت چرخ شده، قارچ، پنیر پیتزا، بیکن، سس مخصوص",
+        "name": "شیکاگو دیپ دیش",
+        "description": "گوشت چرخ شده، قارچ، پنیر پیتزا، بیکن",
         "image": "./assets/images/chicago.jpg",
         "available": true,
         "prices": [
             {
                 "label": "35cm",
-                "price": 1050
+                "price": 1300
             },
             {
                 "label": "25cm",
-                "price": 700
+                "price": 980
             }
         ]
     },
@@ -411,17 +509,109 @@ const menuItems = [
         "id": "chicken-alfredo-pizza-us",
         "category": "pizzaUS",
         "name": "چیکن آلفردو",
-        "description": "شنیسل مرغ، قارچ، سس آلفردو، میکس پنیر پیتزا",
+        "description": "مرغ، قارچ، دیپ، پنیر پیتزا",
         "image": "",
         "available": true,
         "prices": [
             {
                 "label": "35cm",
-                "price": 900
+                "price": 1050
             },
             {
                 "label": "25cm",
-                "price": 600
+                "price": 820
+            }
+        ]
+    },
+    {
+        "id": "chickenfold",
+        "category": "pizzaUS",
+        "name": "چیکن فولددیش",
+        "description": "مرغ، قارچ، بیکن، پنیر پیتزا",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "35cm",
+                "price": 1150
+            },
+            {
+                "label": "25cm",
+                "price": 920
+            }
+        ]
+    },
+    {
+        "id": "smokeyfold",
+        "category": "pizzaUS",
+        "name": "اسموکی فولددیش",
+        "description": "بیکن، قارچ، دیپ چدار، پنیر پیتزا",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "35cm",
+                "price": 1050
+            },
+            {
+                "label": "25cm",
+                "price": 920
+            }
+        ]
+    },
+    {
+        "id": "sidebreak",
+        "category": "dish",
+        "name": "ساید بریک",
+        "description": "راسته استیک، پوره سیب زمینی، دورچین",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 750
+            }
+        ]
+    },
+    {
+        "id": "sidespicey",
+        "category": "dish",
+        "name": "ساید اسپایسی",
+        "description": "مرغ، پوره سیب زمینی، هالوپینو، دورچین",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 620
+            }
+        ]
+    },
+    {
+        "id": "sidesmoke",
+        "category": "dish",
+        "name": "ساید اسموک",
+        "description": "چوریزو، بیکن گوساله، پوره سیب زمینی، دورچین",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 900
+            }
+        ]
+    },
+    {
+        "id": "sidebrisketchic",
+        "category": "dish",
+        "name": "ساید بریسکت چیکن",
+        "description": "مرغ گریل، پوره سیب زمینی، دورچین",
+        "image": "",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 840
             }
         ]
     },
