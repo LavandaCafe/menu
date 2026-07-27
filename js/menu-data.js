@@ -98,20 +98,6 @@ const menuItems = [
         ]
     },
     {
-        "id": "diet-salad",
-        "category": "salad",
-        "name": "سالاد رژیمی",
-        "description": "مرغ گریل، قارچ تنوری، سیب تنوری، نان تست، زیتون، کاهوپیچ",
-        "image": "./assets/images/dietsal.jpg",
-        "available": true,
-        "prices": [
-            {
-                "label": "",
-                "price": 400
-            }
-        ]
-    },
-    {
         "id": "chorizobbq",
         "category": "penini",
         "name": "چوریتزو باربیکیو",
@@ -648,7 +634,7 @@ const menuItems = [
         "category": "espresso",
         "name": "آمریکانو",
         "description": "",
-        "image": "",
+        "image": "./assets/images/americano.jpg",
         "available": true,
         "prices": [
             {
@@ -676,7 +662,7 @@ const menuItems = [
         "category": "espresso",
         "name": "لته",
         "description": "",
-        "image": "",
+        "image": "./assets/images/latte.jpg",
         "available": true,
         "prices": [
             {
@@ -928,7 +914,7 @@ const menuItems = [
         "category": "coldCoffee",
         "name": "آیس لته توت فرنگی",
         "description": "",
-        "image": "",
+        "image": "./assets/images/icestraw.jpg",
         "available": true,
         "prices": [
             {
@@ -1068,7 +1054,7 @@ const menuItems = [
         "category": "colddr",
         "name": "لاواندا ویژن",
         "description": "بلو کاراسائو، آب سودا، آب پرتقال، اسطوخودس",
-        "image": "./assets/images/vision.png",
+        "image": "./assets/images/visdien.jpg",
         "available": true,
         "prices": [
             {
@@ -1124,7 +1110,7 @@ const menuItems = [
         "category": "shake",
         "name": "شیک پینات",
         "description": "",
-        "image": "",
+        "image": "./assets/images/peanutshake.jpg",
         "available": true,
         "prices": [
             {
@@ -1166,7 +1152,7 @@ const menuItems = [
         "category": "shake",
         "name": "شیک توت فرنگی",
         "description": "",
-        "image": "",
+        "image": "./assets/images/strawshake.jpg",
         "available": true,
         "prices": [
             {
@@ -1208,7 +1194,7 @@ const menuItems = [
         "category": "cake",
         "name": "چیزکیک روز",
         "description": "سن سباستین",
-        "image": "",
+        "image": "./assets/images/cheesecake.jpg",
         "available": true,
         "prices": [
             {
@@ -1236,7 +1222,7 @@ const menuItems = [
         "category": "cake",
         "name": "وافل",
         "description": "نوتلا / لوتوس / کره بادام زمینی / پسته",
-        "image": "",
+        "image": "./assets/images/waff.jpg",
         "available": true,
         "prices": [
             {
