@@ -116,7 +116,7 @@ const menuItems = [
         "category": "penini",
         "name": "بوقلمون پستو",
         "description": "بیکن بوقلمون، نان چاپاتا، سس پستو",
-        "image": "",
+        "image": "./assets/images/turpespen.jpg",
         "available": true,
         "prices": [
             {
@@ -198,7 +198,7 @@ const menuItems = [
     {
         "id": "chickenhot",
         "category": "britosh",
-        "name": "چیکن هات",
+        "name": "هات چیکن",
         "description": "شنیسل مرغ، قارچ، دیپ، دورچین",
         "image": "",
         "available": true,
@@ -550,7 +550,7 @@ const menuItems = [
         "category": "dish",
         "name": "ساید بریک",
         "description": "راسته استیک، پوره سیب زمینی، دورچین",
-        "image": "",
+        "image": "./assets/images/sidebreak.jpg",
         "available": true,
         "prices": [
             {
@@ -1068,7 +1068,7 @@ const menuItems = [
         "category": "shake",
         "name": "شیک وانیل",
         "description": "",
-        "image": "",
+        "image": "./assets/images/vanshake.jpg",
         "available": true,
         "prices": [
             {
@@ -1190,6 +1190,20 @@ const menuItems = [
         ]
     },
     {
+        "id": "rafa-cake",
+        "category": "cake",
+        "name": "کیک رافائلو",
+        "description": "شکلاتی / تیرامیسو",
+        "image": "./assets/images/rafa.jpg",
+        "available": true,
+        "prices": [
+            {
+                "label": "",
+                "price": 270
+            }
+        ]
+    },
+    {
         "id": "day-cheese-cake",
         "category": "cake",
         "name": "چیزکیک روز",
@@ -1208,7 +1222,7 @@ const menuItems = [
         "category": "cake",
         "name": "وافل شکلات",
         "description": "",
-        "image": "./assets/images/chocoWaffle.png",
+        "image": "./assets/images/waff.jpg",
         "available": true,
         "prices": [
             {
@@ -1222,7 +1236,7 @@ const menuItems = [
         "category": "cake",
         "name": "وافل",
         "description": "نوتلا / لوتوس / کره بادام زمینی / پسته",
-        "image": "./assets/images/waff.jpg",
+        "image": "./assets/images/pistwaff.jpg",
         "available": true,
         "prices": [
             {
