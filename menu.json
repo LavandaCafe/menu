@@ -955,8 +955,8 @@
     {
       "id": "afogato",
       "category": "coldCoffee",
-      "name": "آفوگاتو",
-      "description": "لوتوس / پسته",
+      "name": "آفوگاتو پسته",
+      "description": "",
       "image": "./assets/images/pistachioAfogato.png",
       "available": true,
       "prices": [
@@ -1125,7 +1125,7 @@
       "category": "shake",
       "name": "شیک نوتلا",
       "description": "",
-      "image": "",
+      "image": "./assets/images/nutella-shake.jpg",
       "available": true,
       "prices": [
         {
@@ -1182,15 +1182,11 @@
       "name": "کیک شکلاتی",
       "description": "",
       "image": "./assets/images/chocoCake.png",
-      "available": true,
+      "available": false,
       "prices": [
         {
           "label": "",
           "price": 270
-        },
-        {
-          "label": "",
-          "price": 0
         }
       ]
     },
@@ -1275,6 +1271,20 @@
         {
           "label": "",
           "price": 270
+        }
+      ]
+    },
+    {
+      "id": "item-msc2alb6-fzedh",
+      "name": "آفوگاتو لوتوس",
+      "category": "coldCoffee",
+      "description": "",
+      "image": "./assets/images/item-msc2alb6-fzedh.jpg",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 330
         }
       ]
     }
