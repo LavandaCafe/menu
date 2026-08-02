@@ -1198,7 +1198,7 @@
       "id": "rafa-cake",
       "category": "cake",
       "name": "کیک رافائلو",
-      "description": "شکلاتی / تیرامیسو",
+      "description": "",
       "image": "./assets/images/rafa.jpg",
       "available": true,
       "prices": [
@@ -1211,8 +1211,8 @@
     {
       "id": "day-cheese-cake",
       "category": "cake",
-      "name": "چیزکیک روز",
-      "description": "سن سباستین",
+      "name": "چیزکیک سن سباستین",
+      "description": "",
       "image": "./assets/images/cheesecake.jpg",
       "available": false,
       "prices": [
