@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lavanda · Menu Admin</title>
+<style>
+  :root {
+    --bg: #F6F3FA;
+    --surface: #FFFFFF;
+    --surface-2: #EFE9F5;
+    --ink: #2A2338;
+    --ink-soft: #6B6178;
+    --primary: #6C5A94;
+    --primary-dark: #4E3F73;
+    --line: #E2DAEE;
+    --available: #5B7A56;
+    --available-bg: #E7EFE4;
+    --unavailable: #96583D;
+    --unavailable-bg: #F3E6DD;
+    --danger: #A6503B;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; }
+
+  /* .setup-screen and .modal-backdrop below set their own `display`, which
+     (per normal CSS cascade rules) silently overrides the browser's default
+     [hidden] { display: none } — without this, elements marked hidden via
+     JS still render and still catch clicks. This forces hidden to actually
+     mean hidden. */
+  [hidden] { display: none !important; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+  }
+
+  a { color: var(--primary-dark); }
+
+  .brand { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .brand-name { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.02em; }
+  .brand-stars { color: var(--primary); font-size: 0.7rem; letter-spacing: 1px; }
+  .brand-sub { color: var(--ink-soft); font-size: 0.85rem; }
+
+  /* ---------- Setup screen ---------- */
+  .setup-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .setup-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    max-width: 420px;
+    width: 100%;
+  }
+  .setup-card h1 { font-size: 1.25rem; margin: 14px 0 8px; }
+  .setup-card p { color: var(--ink-soft); font-size: 0.88rem; line-height: 1.55; }
+  .setup-steps { padding-left: 20px; font-size: 0.85rem; line-height: 1.7; color: var(--ink); margin: 12px 0; }
+  #token-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin: 6px 0 12px;
+  }
+  .fine-print { font-size: 0.74rem; color: var(--ink-soft); margin-top: 14px; line-height: 1.5; }
+
+  /* ---------- App layout ---------- */
+  .app { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; }
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0 18px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+  .dirty-badge {
+    font-size: 0.74rem;
+    color: var(--unavailable);
+    background: var(--unavailable-bg);
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .toolbar { display: flex; gap: 10px; margin-bottom: 18px; }
+  #search-input {
+    flex: 1;
+    padding: 9px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+
+  .btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-weight: 600;
+    font-size: 0.86rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-primary:hover:not(:disabled) { background: var(--primary-dark); }
+  .btn-primary:disabled { background: var(--surface-2); color: var(--ink-soft); cursor: not-allowed; }
+  .btn-ghost { background: transparent; color: var(--primary-dark); border: 1px solid var(--line); }
+  .btn-ghost:hover { background: var(--surface-2); }
+
+  .category-section { margin-bottom: 22px; }
+  .category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 10px;
+  }
+  .category-header .count { color: var(--ink-soft); font-weight: 400; font-size: 0.82rem; }
+
+  .item-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    margin-bottom: 8px;
+  }
+  .item-row.item-unavailable { opacity: 0.6; }
+  .item-thumb, .item-thumb-placeholder {
+    width: 42px; height: 42px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--surface-2);
+    flex: 0 0 auto;
+    display: block;
+  }
+  .item-main { flex: 1 1 180px; min-width: 140px; }
+  .item-name { font-weight: 600; }
+  .item-desc { color: var(--ink-soft); font-size: 0.8rem; margin-top: 2px; }
+  .item-price { flex: 0 0 auto; font-variant-numeric: tabular-nums; color: var(--ink-soft); font-size: 0.82rem; white-space: nowrap; }
+  .item-actions { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; margin-left: auto; }
+
+  .toggle-pill {
+    border: none;
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .toggle-pill.is-available { background: var(--available-bg); color: var(--available); }
+  .toggle-pill.is-unavailable { background: var(--unavailable-bg); color: var(--unavailable); }
+
+  .icon-btn {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    line-height: 1;
+    flex: 0 0 auto;
+  }
+  .icon-btn:hover { background: var(--surface-2); }
+  .icon-btn.danger:hover { background: var(--unavailable-bg); border-color: var(--danger); }
+
+  .empty-state {
+    text-align: center;
+    color: var(--ink-soft);
+    padding: 40px 20px;
+    font-size: 0.88rem;
+  }
+  .empty-state.small { padding: 14px 0; text-align: left; }
+
+  .app-footer { text-align: center; margin-top: 30px; }
+  .link-btn { background: none; border: none; color: var(--ink-soft); text-decoration: underline; cursor: pointer; font-size: 0.8rem; }
+
+  /* ---------- Modals ---------- */
+  .modal-backdrop {
+    position: fixed; inset: 0;
+    background: rgba(42, 35, 56, 0.4);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    z-index: 10;
+  }
+  .modal {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 24px;
+    max-width: 460px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .modal h2 { margin-top: 0; font-size: 1.1rem; }
+  .modal label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+  .modal input, .modal select, .modal textarea {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+  .modal textarea { min-height: 56px; resize: vertical; }
+  .switch-row { display: flex; align-items: center; gap: 8px; }
+  .switch-row input { width: auto; margin: 0; }
+  .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
+
+  #image-preview { max-width: 100px; max-height: 100px; border-radius: 8px; margin-top: 8px; object-fit: cover; display: none; }
+
+  .prices-label { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 6px; }
+  .price-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .modal .price-row input { width: auto; flex: 1 1 0; margin-top: 0; }
+  #add-price-btn { margin-bottom: 14px; }
+
+  #copy-textarea { width: 100%; min-height: 220px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.76rem; }
+
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    max-width: 90vw;
+    text-align: center;
+    z-index: 20;
+  }
+  .toast-error { background: var(--danger); }
+  .toast-success { background: var(--available); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="toast" class="toast" hidden></div>
+
+<!-- SETUP SCREEN -->
+<div id="setup-screen" class="setup-screen">
+  <div class="setup-card">
+    <div class="brand"><span class="brand-name">Lavanda</span><span class="brand-stars">★★★★★</span></div>
+    <h1>Menu Admin</h1>
+    <p>Connect a GitHub personal access token so this page can read and update your menu file directly.</p>
+    <ol class="setup-steps">
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a></li>
+      <li>Under "Repository access," choose only the <code>menu</code> repository</li>
+      <li>Under "Permissions → Repository permissions," set <strong>Contents</strong> to <strong>Read and write</strong></li>
+      <li>Generate the token, then paste it below</li>
+    </ol>
+    <input type="password" id="token-input" placeholder="github_pat_…" autocomplete="off" />
+    <button id="connect-btn" class="btn btn-primary" style="width:100%">Connect</button>
+    <p class="fine-print">The token is saved only in this browser (localStorage). It is never written into the repository, so the public site stays safe.</p>
+  </div>
+</div>
+
+<!-- APP SCREEN -->
+<div id="app" class="app" hidden>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-name">Lavanda</span><span class="brand-stars">★★★★★</span><span class="brand-sub">Menu Admin</span>
+    </div>
+    <div class="header-actions">
+      <span id="dirty-badge" class="dirty-badge" hidden></span>
+      <button id="copy-json-btn" class="btn btn-ghost" title="Copy current menu as JSON">Copy JSON</button>
+      <button id="publish-btn" class="btn btn-primary" disabled>Publish</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input type="search" id="search-input" placeholder="Search items…" />
+    <button id="add-item-btn" class="btn btn-primary">+ Add item</button>
+  </div>
+
+  <main id="categories-container">
+    <div class="empty-state">Loading menu…</div>
+  </main>
+
+  <footer class="app-footer">
+    <button id="signout-btn" class="link-btn">Disconnect token from this browser</button>
+  </footer>
+</div>
+
+<!-- ITEM FORM MODAL -->
+<div id="item-modal" class="modal-backdrop" hidden>
+  <div class="modal">
+    <h2 id="modal-title">Add item</h2>
+    <label>Name
+      <input type="text" id="field-name" dir="auto" />
+    </label>
+    <label>Category
+      <select id="field-category"></select>
+    </label>
+    <label>Description (optional)
+      <textarea id="field-description" dir="auto"></textarea>
+    </label>
+    <label>Image path (optional)
+      <input type="text" id="field-image" placeholder="./assets/images/example.jpg" dir="ltr" />
+    </label>
+    <img id="image-preview" alt="" />
+
+    <div class="prices-label">Price(s) — add more than one for sizes like 33cm / 35cm</div>
+    <div id="price-rows"></div>
+    <button type="button" id="add-price-btn" class="btn btn-ghost">+ Add size/price</button>
+
+    <label class="switch-row">
+      <input type="checkbox" id="field-available" checked />
+      Available
+    </label>
+    <div class="modal-actions">
+      <button id="modal-cancel-btn" class="btn btn-ghost">Cancel</button>
+      <button id="modal-save-btn" class="btn btn-primary">Save item</button>
+    </div>
+  </div>
+</div>
+
+<!-- COPY / FALLBACK MODAL -->
+<div id="copy-modal" class="modal-backdrop" hidden>
+  <div class="modal">
+    <h2>Menu JSON</h2>
+    <p style="font-size:0.85rem;color:var(--ink-soft);">If Publish ever won't go through, select all, copy, and paste this over the contents of <code>menu.json</code> using GitHub's own web file editor.</p>
+    <textarea id="copy-textarea" readonly></textarea>
+    <div class="modal-actions">
+      <button id="copy-close-btn" class="btn btn-primary">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ====================================================================
+  // Repo this admin panel talks to (confirmed from github.com/LavandaCafe/menu)
+  // ====================================================================
+  const CONFIG = {
+    owner: 'LavandaCafe',
+    repo: 'menu',
+    path: 'menu.json',
+    branch: 'main'
+  };
+  // Used only to preview images (they're served from the live site, not this admin page)
+  const SITE_BASE_URL = 'https://lavandacafe.github.io/menu/';
+  // ====================================================================
+
+  // Fixed categories, matching the tabs already hardcoded in index.html.
+  // Adding a brand-new category here does NOT create a new tab on the live
+  // site — that still needs a matching <button class="tab" data-category="...">
+  // added to index.html by hand.
+  const CATEGORIES = [
+    { slug: 'salad', label: 'پیش غذا و سالاد' },
+    { slug: 'penini', label: 'پنینی' },
+    { slug: 'britosh', label: 'بریتوش' },
+    { slug: 'pasta', label: 'پاستا' },
+    { slug: 'burger', label: 'برگر' },
+    { slug: 'pizzaIT', label: 'پیتزا رومی استایل' },
+    { slug: 'pizzaUS', label: 'پیتزا نیویورک استایل' },
+    { slug: 'dish', label: 'بشقاب' },
+    { slug: 'espresso', label: 'اسپرسو بار' },
+    { slug: 'hotdr', label: 'نوشیدنی گرم' },
+    { slug: 'tea', label: 'چای و دمنوش' },
+    { slug: 'coldCoffee', label: 'نوشیدنی سرد بر پایه اسپرسو' },
+    { slug: 'colddr', label: 'نوشیدنی سرد' },
+    { slug: 'shake', label: 'شیک' },
+    { slug: 'cake', label: 'کیک و دسر' }
+  ];
+  const KNOWN_SLUGS = CATEGORIES.map((c) => c.slug);
+  function categoryLabel(slug) {
+    const found = CATEGORIES.find((c) => c.slug === slug);
+    return found ? found.label : slug;
+  }
+
+  const TOKEN_KEY = 'lavanda_admin_token';
+  const DRAFT_KEY = 'lavanda_admin_draft';
+  const API_BASE = 'https://api.github.com';
+
+  const state = {
+    token: localStorage.getItem(TOKEN_KEY) || '',
+    sha: null,
+    items: [],
+    dirty: false,
+    editingId: null
+  };
+  let modalPrices = [];
+
+  const $ = (id) => document.getElementById(id);
+  const setupScreen = $('setup-screen');
+  const appEl = $('app');
+  const toastEl = $('toast');
+
+  // ---------------- helpers ----------------
+  function showToast(msg, type) {
+    toastEl.textContent = msg;
+    toastEl.className = 'toast' + (type ? ' toast-' + type : '');
+    toastEl.hidden = false;
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => { toastEl.hidden = true; }, 4000);
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str == null ? '' : String(str);
+    return div.innerHTML;
+  }
+
+  function formatPrice(price) {
+    if (price === undefined || price === null || price === '') return '';
+    const n = Number(price);
+    return isNaN(n) ? '' : n.toLocaleString('en-US');
+  }
+
+  function formatPrices(prices) {
+    if (!Array.isArray(prices) || prices.length === 0) return '';
+    return prices.map((p) => (p.label ? `${p.label}: ${formatPrice(p.price)}` : formatPrice(p.price))).join(' · ');
+  }
+
+  function resolveImageUrl(path) {
+    if (!path) return '';
+    return SITE_BASE_URL + path.replace(/^\.\//, '');
+  }
+
+  function genId() {
+    return 'item-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 7);
+  }
+
+  function showSetupScreen() { setupScreen.hidden = false; appEl.hidden = true; }
+  function showApp() { setupScreen.hidden = true; appEl.hidden = false; }
+
+  // UTF-8 safe base64 (critical for Persian text)
+  function b64ToUtf8(b64) {
+    const binary = atob(b64.replace(/\n/g, ''));
+    const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+    return new TextDecoder('utf-8').decode(bytes);
+  }
+  function utf8ToB64(str) {
+    const bytes = new TextEncoder().encode(str);
+    let binary = '';
+    bytes.forEach((b) => { binary += String.fromCharCode(b); });
+    return btoa(binary);
+  }
+
+  // ---------------- GitHub API ----------------
+  function apiHeaders() {
+    return {
+      'Authorization': 'Bearer ' + state.token,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28'
+    };
+  }
+
+  async function fetchMenu() {
+    const url = `${API_BASE}/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.path}?ref=${CONFIG.branch}`;
+    const res = await fetch(url, { headers: apiHeaders() });
+    if (res.status === 404) {
+      state.sha = null;
+      return { items: [] };
+    }
+    if (res.status === 401 || res.status === 403) throw new Error('AUTH');
+    if (!res.ok) throw new Error('HTTP_' + res.status);
+    const data = await res.json();
+    state.sha = data.sha;
+    let json;
+    try {
+      json = JSON.parse(b64ToUtf8(data.content));
+    } catch (e) {
+      json = {};
+    }
+    return { items: Array.isArray(json.items) ? json.items : [] };
+  }
+
+  async function publishMenu() {
+    const payload = { items: state.items };
+    const body = {
+      message: 'Update menu via admin panel',
+      content: utf8ToB64(JSON.stringify(payload, null, 2)),
+      branch: CONFIG.branch
+    };
+    if (state.sha) body.sha = state.sha;
+
+    const url = `${API_BASE}/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${CONFIG.path}`;
+    const res = await fetch(url, {
+      method: 'PUT',
+      headers: Object.assign(apiHeaders(), { 'Content-Type': 'application/json' }),
+      body: JSON.stringify(body)
+    });
+    if (res.status === 401 || res.status === 403) throw new Error('AUTH');
+    if (res.status === 409) throw new Error('CONFLICT');
+    if (!res.ok) throw new Error('HTTP_' + res.status);
+    const data = await res.json();
+    state.sha = data.content.sha;
+  }
+
+  function handleApiError(err) {
+    const msg = err && err.message;
+    if (msg === 'AUTH') {
+      showToast('Token invalid or expired — reconnect below.', 'error');
+      localStorage.removeItem(TOKEN_KEY);
+      state.token = '';
+      showSetupScreen();
+    } else if (msg === 'CONFLICT') {
+      showToast('The menu changed elsewhere since you loaded it. Reload the page before publishing again.', 'error');
+    } else {
+      showToast('Could not reach GitHub (' + (msg || 'unknown error') + '). Check your connection and try again.', 'error');
+    }
+  }
+
+  // ---------------- draft autosave ----------------
+  function saveDraft() {
+    try {
+      localStorage.setItem(DRAFT_KEY, JSON.stringify({ items: state.items, sha: state.sha, savedAt: Date.now() }));
+    } catch (e) { /* storage unavailable — non-fatal */ }
+  }
+  function loadDraft() {
+    try {
+      const raw = localStorage.getItem(DRAFT_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function markDirty() {
+    state.dirty = true;
+    saveDraft();
+    updateDirtyUI();
+  }
+  function updateDirtyUI() {
+    $('publish-btn').disabled = !state.dirty;
+    const badge = $('dirty-badge');
+    if (state.dirty) {
+      badge.hidden = false;
+      badge.textContent = 'Unpublished changes';
+    } else {
+      badge.hidden = true;
+    }
+  }
+
+  // ---------------- rendering ----------------
+  function render() {
+    const container = $('categories-container');
+    container.innerHTML = '';
+    const query = $('search-input').value.trim().toLowerCase();
+
+    let anyVisible = false;
+
+    CATEGORIES.forEach(({ slug, label }) => {
+      const allInCat = state.items.filter((i) => i.category === slug);
+      const visible = allInCat.filter((it) => !query || it.name.toLowerCase().includes(query));
+      if (query && visible.length === 0) return;
+      anyVisible = true;
+      container.appendChild(renderSection(label, allInCat.length, visible));
+    });
+
+    // Safety net: items whose category doesn't match any known slug
+    const orphans = state.items.filter((i) => !KNOWN_SLUGS.includes(i.category));
+    if (orphans.length) {
+      const visible = orphans.filter((it) => !query || it.name.toLowerCase().includes(query));
+      if (!query || visible.length) {
+        anyVisible = true;
+        container.appendChild(renderSection('Uncategorized', orphans.length, visible));
+      }
+    }
+
+    if (!anyVisible) {
+      container.innerHTML = '<div class="empty-state">No items match your search.</div>';
+    }
+  }
+
+  function renderSection(label, totalCount, visibleItems) {
+    const section = document.createElement('section');
+    section.className = 'category-section';
+    const header = document.createElement('div');
+    header.className = 'category-header';
+    header.innerHTML = `<span dir="auto">${escapeHtml(label)}</span><span class="count">${totalCount}</span>`;
+    section.appendChild(header);
+
+    if (visibleItems.length === 0) {
+      const empty = document.createElement('div');
+      empty.className = 'empty-state small';
+      empty.textContent = 'No items in this category yet.';
+      section.appendChild(empty);
+    } else {
+      visibleItems.forEach((item) => section.appendChild(renderItemRow(item)));
+    }
+    return section;
+  }
+
+  function renderItemRow(item) {
+    const row = document.createElement('div');
+    row.className = 'item-row' + (item.available ? '' : ' item-unavailable');
+    const thumb = item.image
+      ? `<img class="item-thumb" src="${resolveImageUrl(item.image)}" alt="" loading="lazy" onerror="this.classList.add('item-thumb-placeholder');this.removeAttribute('src');">`
+      : `<div class="item-thumb-placeholder"></div>`;
+    row.innerHTML = `
+      ${thumb}
+      <div class="item-main">
+        <div class="item-name" dir="auto">${escapeHtml(item.name)}</div>
+        ${item.description ? `<div class="item-desc" dir="auto">${escapeHtml(item.description)}</div>` : ''}
+      </div>
+      <div class="item-price">${escapeHtml(formatPrices(item.prices))}</div>
+      <div class="item-actions">
+        <button class="toggle-pill ${item.available ? 'is-available' : 'is-unavailable'}" data-id="${item.id}" data-action="toggle">
+          ${item.available ? 'Available' : 'Unavailable'}
+        </button>
+        <button class="icon-btn" data-id="${item.id}" data-action="edit" aria-label="Edit item">✎</button>
+        <button class="icon-btn danger" data-id="${item.id}" data-action="delete" aria-label="Delete item">🗑</button>
+      </div>
+    `;
+    return row;
+  }
+
+  $('categories-container').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-action]');
+    if (!btn) return;
+    const id = btn.dataset.id;
+    const action = btn.dataset.action;
+    const item = state.items.find((i) => i.id === id);
+    if (!item) return;
+
+    if (action === 'toggle') {
+      item.available = !item.available;
+      markDirty();
+      render();
+    } else if (action === 'edit') {
+      openItemModal(item);
+    } else if (action === 'delete') {
+      if (confirm(`Delete "${item.name}"? This can't be undone once published.`)) {
+        state.items = state.items.filter((i) => i.id !== id);
+        markDirty();
+        render();
+      }
+    }
+  });
+
+  $('search-input').addEventListener('input', render);
+
+  // ---------------- price rows (dynamic) ----------------
+  function renderPriceRows() {
+    const container = $('price-rows');
+    container.innerHTML = '';
+    modalPrices.forEach((p, idx) => {
+      const row = document.createElement('div');
+      row.className = 'price-row';
+      row.dataset.idx = String(idx);
+      row.innerHTML = `
+        <input type="text" class="price-label" placeholder="Size (optional)" value="${escapeHtml(p.label || '')}" dir="auto" />
+        <input type="number" class="price-value" placeholder="Price" value="${p.price === '' || p.price == null ? '' : p.price}" min="0" step="1" />
+        <button type="button" class="icon-btn danger remove-price-btn" data-idx="${idx}" aria-label="Remove this price">✕</button>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  $('price-rows').addEventListener('input', (e) => {
+    const row = e.target.closest('.price-row');
+    if (!row) return;
+    const idx = Number(row.dataset.idx);
+    if (!modalPrices[idx]) return;
+    if (e.target.classList.contains('price-label')) modalPrices[idx].label = e.target.value;
+    if (e.target.classList.contains('price-value')) modalPrices[idx].price = e.target.value;
+  });
+
+  $('price-rows').addEventListener('click', (e) => {
+    const btn = e.target.closest('.remove-price-btn');
+    if (!btn) return;
+    if (modalPrices.length <= 1) { showToast('Keep at least one price row.', 'error'); return; }
+    modalPrices.splice(Number(btn.dataset.idx), 1);
+    renderPriceRows();
+  });
+
+  $('add-price-btn').addEventListener('click', () => {
+    modalPrices.push({ label: '', price: '' });
+    renderPriceRows();
+  });
+
+  // ---------------- item modal ----------------
+  function populateCategoryOptions(selected) {
+    const select = $('field-category');
+    select.innerHTML = '';
+    CATEGORIES.forEach(({ slug, label }) => {
+      const opt = document.createElement('option');
+      opt.value = slug;
+      opt.textContent = label;
+      select.appendChild(opt);
+    });
+    select.value = selected && KNOWN_SLUGS.includes(selected) ? selected : CATEGORIES[0].slug;
+  }
+
+  $('field-image').addEventListener('input', updateImagePreview);
+  function updateImagePreview() {
+    const val = $('field-image').value.trim();
+    const img = $('image-preview');
+    if (val) {
+      img.src = resolveImageUrl(val);
+      img.style.display = 'inline-block';
+    } else {
+      img.style.display = 'none';
+      img.removeAttribute('src');
+    }
+  }
+
+  function openItemModal(item) {
+    state.editingId = item ? item.id : null;
+    $('modal-title').textContent = item ? 'Edit item' : 'Add item';
+    $('field-name').value = item ? item.name : '';
+    $('field-description').value = item ? (item.description || '') : '';
+    $('field-image').value = item ? (item.image || '') : '';
+    $('field-available').checked = item ? !!item.available : true;
+    populateCategoryOptions(item ? item.category : null);
+    updateImagePreview();
+
+    modalPrices = item && Array.isArray(item.prices) && item.prices.length
+      ? item.prices.map((p) => ({ label: p.label || '', price: p.price }))
+      : [{ label: '', price: '' }];
+    renderPriceRows();
+
+    $('item-modal').hidden = false;
+    $('field-name').focus();
+  }
+
+  $('add-item-btn').addEventListener('click', () => openItemModal(null));
+  $('modal-cancel-btn').addEventListener('click', () => { $('item-modal').hidden = true; });
+
+  $('modal-save-btn').addEventListener('click', () => {
+    const name = $('field-name').value.trim();
+    if (!name) { showToast('Name is required.', 'error'); return; }
+
+    const category = $('field-category').value;
+    const description = $('field-description').value.trim();
+    const image = $('field-image').value.trim();
+    const available = $('field-available').checked;
+
+    const prices = modalPrices
+      .map((p) => ({ label: (p.label || '').trim(), price: Number(p.price) }))
+      .filter((p) => !isNaN(p.price) && p.price !== null);
+    if (prices.length === 0) { showToast('Add at least one valid price.', 'error'); return; }
+
+    if (state.editingId) {
+      const item = state.items.find((i) => i.id === state.editingId);
+      if (item) Object.assign(item, { name, category, description, image, available, prices });
+    } else {
+      state.items.push({ id: genId(), name, category, description, image, available, prices });
+    }
+
+    markDirty();
+    $('item-modal').hidden = true;
+    render();
+  });
+
+  // ---------------- publish / copy fallback ----------------
+  $('publish-btn').addEventListener('click', async () => {
+    const btn = $('publish-btn');
+    btn.disabled = true;
+    btn.textContent = 'Publishing…';
+    try {
+      await publishMenu();
+      state.dirty = false;
+      localStorage.removeItem(DRAFT_KEY);
+      showToast('Published — your live menu will update within a minute or two.', 'success');
+    } catch (err) {
+      handleApiError(err);
+    } finally {
+      btn.textContent = 'Publish';
+      updateDirtyUI();
+    }
+  });
+
+  $('copy-json-btn').addEventListener('click', () => {
+    const json = JSON.stringify({ items: state.items }, null, 2);
+    $('copy-textarea').value = json;
+    $('copy-modal').hidden = false;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(json).then(
+        () => showToast('Copied to clipboard.', 'success'),
+        () => {} // clipboard API blocked — the visible textarea still lets them copy by hand
+      );
+    }
+  });
+  $('copy-close-btn').addEventListener('click', () => { $('copy-modal').hidden = true; });
+
+  // ---------------- setup / connect ----------------
+  $('connect-btn').addEventListener('click', () => {
+    const val = $('token-input').value.trim();
+    if (!val) { showToast('Paste a token first.', 'error'); return; }
+    state.token = val;
+    localStorage.setItem(TOKEN_KEY, val);
+    init();
+  });
+
+  $('signout-btn').addEventListener('click', () => {
+    if (confirm('Disconnect this token from this browser? You can reconnect anytime with the same or a new token.')) {
+      localStorage.removeItem(TOKEN_KEY);
+      state.token = '';
+      showSetupScreen();
+    }
+  });
+
+  // ---------------- boot ----------------
+  async function init() {
+    if (!state.token) { showSetupScreen(); return; }
+    showApp();
+    $('categories-container').innerHTML = '<div class="empty-state">Loading menu…</div>';
+    try {
+      const remote = await fetchMenu();
+      const draft = loadDraft();
+      const remoteMatchesDraftBase = draft && draft.sha === state.sha;
+      const draftDiffers = draft && JSON.stringify(draft.items) !== JSON.stringify(remote.items);
+
+      if (remoteMatchesDraftBase && draftDiffers &&
+          confirm('You have unpublished edits saved in this browser from last time. Restore them?')) {
+        state.items = draft.items;
+        state.dirty = true;
+      } else {
+        state.items = remote.items;
+        state.dirty = false;
+      }
+      updateDirtyUI();
+      render();
+    } catch (err) {
+      handleApiError(err);
+    }
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
