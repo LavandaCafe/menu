@@ -1245,6 +1245,20 @@
           "price": 390
         }
       ]
+    },
+    {
+      "id": "item-msbpv58h-4w45x",
+      "name": "فرنچ لانژ",
+      "category": "salad",
+      "description": "",
+      "image": "",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 510
+        }
+      ]
     }
   ]
 }
