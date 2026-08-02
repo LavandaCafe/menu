@@ -1179,14 +1179,18 @@
     {
       "id": "day-cake",
       "category": "cake",
-      "name": "کیک روز",
-      "description": "شکلاتی",
+      "name": "کیک شکلاتی",
+      "description": "",
       "image": "./assets/images/chocoCake.png",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
           "price": 270
+        },
+        {
+          "label": "",
+          "price": 0
         }
       ]
     },
