@@ -1224,7 +1224,7 @@
       "name": "وافل شکلات",
       "description": "",
       "image": "./assets/images/waff.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1238,7 +1238,7 @@
       "name": "وافل",
       "description": "نوتلا / لوتوس / کره بادام زمینی / پسته",
       "image": "./assets/images/pistwaff.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
