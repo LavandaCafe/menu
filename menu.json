@@ -1210,7 +1210,7 @@
       "name": "چیزکیک روز",
       "description": "سن سباستین",
       "image": "./assets/images/cheesecake.jpg",
-      "available": true,
+      "available": false,
       "prices": [
         {
           "label": "",
