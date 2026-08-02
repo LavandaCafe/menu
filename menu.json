@@ -1180,9 +1180,9 @@
       "id": "day-cake",
       "category": "cake",
       "name": "کیک روز",
-      "description": "شکلاتی / تیرامیسو",
+      "description": "شکلاتی",
       "image": "./assets/images/chocoCake.png",
-      "available": true,
+      "available": false,
       "prices": [
         {
           "label": "",
@@ -1257,6 +1257,20 @@
         {
           "label": "",
           "price": 510
+        }
+      ]
+    },
+    {
+      "id": "item-msbrk8hq-qud4b",
+      "name": "کیک تیرامیسو",
+      "category": "cake",
+      "description": "",
+      "image": "./assets/images/item-msbrk8hq-qud4b.jpg",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 270
         }
       ]
     }
