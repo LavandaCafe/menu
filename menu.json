@@ -1026,7 +1026,7 @@
       "id": "blue-oisin",
       "category": "colddr",
       "name": "بلو اوشن",
-      "description": "",
+      "description": "بلو کاراسائو، آلوئه ورا، سودا، پیناکولادا",
       "image": "./assets/images/bluocean.png",
       "available": true,
       "prices": [
@@ -1182,7 +1182,7 @@
       "name": "کیک شکلاتی",
       "description": "",
       "image": "./assets/images/chocoCake.png",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1266,7 +1266,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-msbrk8hq-qud4b.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
