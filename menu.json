@@ -970,7 +970,7 @@
       "id": "lemonade",
       "category": "colddr",
       "name": "لیموناد",
-      "description": "",
+      "description": "لیمو، سودا",
       "image": "./assets/images/lemonade.png",
       "available": true,
       "prices": [
@@ -984,7 +984,7 @@
       "id": "mojito",
       "category": "colddr",
       "name": "موهیتو",
-      "description": "",
+      "description": "سیروپ موهیتو، لیمو، نعنا، سودا",
       "image": "./assets/images/mojito.png",
       "available": true,
       "prices": [
@@ -998,7 +998,7 @@
       "id": "red-mojito",
       "category": "colddr",
       "name": "رد موهیتو",
-      "description": "",
+      "description": "سیروپ توت فرنگی، لیمو، نعنا، توت فرنگی، سودا",
       "image": "./assets/images/redMojito.png",
       "available": true,
       "prices": [
@@ -1012,7 +1012,7 @@
       "id": "blue-mojito",
       "category": "colddr",
       "name": "بلو موهیتو",
-      "description": "",
+      "description": "بلو کاراسائو، لیمو، نعنا، بلوبری، سودا",
       "image": "./assets/images/blumoj.png",
       "available": true,
       "prices": [
