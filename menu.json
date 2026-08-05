@@ -1287,6 +1287,20 @@
           "price": 330
         }
       ]
+    },
+    {
+      "id": "item-msgmj3ze-6fzzr",
+      "name": "کیک کرم لوتوس",
+      "category": "cake",
+      "description": "",
+      "image": "./assets/images/item-msgmj3ze-6fzzr.jpg",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 290
+        }
+      ]
     }
   ]
 }
