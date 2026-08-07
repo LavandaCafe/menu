@@ -1084,7 +1084,7 @@
       "name": "شیک شکلات",
       "description": "",
       "image": "./assets/images/chocoShake.png",
-      "available": true,
+      "available": false,
       "prices": [
         {
           "label": "",
