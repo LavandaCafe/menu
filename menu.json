@@ -1166,8 +1166,8 @@
       "id": "cafe-gla",
       "category": "shake",
       "name": "کافه گلاسه",
-      "description": "",
-      "image": "",
+      "description": "شیر، بستنی وانیل، اسپرسو",
+      "image": "./assets/images/cafe-gla.jpg",
       "available": true,
       "prices": [
         {
