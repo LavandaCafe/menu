@@ -1238,7 +1238,7 @@
       "name": "چیزکیک سن سباستین",
       "description": "",
       "image": "./assets/images/cheesecake.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
