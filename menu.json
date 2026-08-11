@@ -1070,7 +1070,7 @@
       "name": "شیک وانیل",
       "description": "",
       "image": "./assets/images/vanshake.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1098,7 +1098,7 @@
       "name": "شیک لوتوس",
       "description": "",
       "image": "./assets/images/lotus.png",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1112,7 +1112,7 @@
       "name": "شیک پینات",
       "description": "",
       "image": "./assets/images/peanutshake.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1126,7 +1126,7 @@
       "name": "شیک نوتلا",
       "description": "",
       "image": "./assets/images/nutella-shake.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1154,7 +1154,7 @@
       "name": "شیک توت فرنگی",
       "description": "",
       "image": "./assets/images/strawshake.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1168,7 +1168,7 @@
       "name": "کافه گلاسه",
       "description": "شیر، بستنی وانیل، اسپرسو",
       "image": "./assets/images/cafe-gla.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
