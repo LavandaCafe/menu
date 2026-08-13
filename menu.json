@@ -15,11 +15,11 @@
       ]
     },
     {
-      "id": "dip-fries",
+      "id": "alfredo-fries",
       "category": "salad",
-      "name": "دیپ فرایز",
-      "description": "سیب خلالی، سس دیپ",
-      "image": "./assets/images/dipfries.jpg",
+      "name": "آلفردو فرایز",
+      "description": "سیب خلالی، سس قارچ",
+      "image": "./assets/images/alfries.jpg",
       "available": true,
       "prices": [
         {
@@ -29,11 +29,11 @@
       ]
     },
     {
-      "id": "alfredo-fries",
+      "id": "dip-fries",
       "category": "salad",
-      "name": "آلفردو فرایز",
-      "description": "سیب خلالی، سس قارچ",
-      "image": "./assets/images/alfries.jpg",
+      "name": "دیپ فرایز",
+      "description": "سیب خلالی، سس دیپ",
+      "image": "./assets/images/dipfries.jpg",
       "available": true,
       "prices": [
         {
@@ -1084,7 +1084,7 @@
       "name": "شیک شکلات",
       "description": "",
       "image": "./assets/images/chocoShake.png",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1196,7 +1196,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-msbrk8hq-qud4b.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -1238,7 +1238,7 @@
       "name": "چیزکیک سن سباستین",
       "description": "",
       "image": "./assets/images/cheesecake.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
