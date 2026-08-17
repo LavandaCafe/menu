@@ -1275,20 +1275,6 @@
       ]
     },
     {
-      "id": "item-msbpv58h-4w45x",
-      "name": "فرنچ لانژ",
-      "category": "salad",
-      "description": "",
-      "image": "",
-      "available": true,
-      "prices": [
-        {
-          "label": "",
-          "price": 510
-        }
-      ]
-    },
-    {
       "id": "item-msc2alb6-fzedh",
       "name": "آفوگاتو لوتوس",
       "category": "coldCoffee",
