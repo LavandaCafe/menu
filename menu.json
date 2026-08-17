@@ -155,20 +155,6 @@
       ]
     },
     {
-      "id": "baconsalsa",
-      "category": "britosh",
-      "name": "بیکن سالسا",
-      "description": "بیکن گوساله، سس سالسا، دورچین",
-      "image": "",
-      "available": true,
-      "prices": [
-        {
-          "label": "",
-          "price": 560
-        }
-      ]
-    },
-    {
       "id": "chorizopesto",
       "category": "britosh",
       "name": "چوریتزو پستو",
@@ -179,6 +165,20 @@
         {
           "label": "",
           "price": 800
+        }
+      ]
+    },
+    {
+      "id": "baconsalsa",
+      "category": "britosh",
+      "name": "بیکن سالسا",
+      "description": "بیکن گوساله، سس سالسا، دورچین",
+      "image": "",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 560
         }
       ]
     },
@@ -1196,7 +1196,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-msbrk8hq-qud4b.jpg",
-      "available": true,
+      "available": false,
       "prices": [
         {
           "label": "",
@@ -1210,7 +1210,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-msgmj3ze-6fzzr.jpg",
-      "available": true,
+      "available": false,
       "prices": [
         {
           "label": "",
