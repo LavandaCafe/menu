@@ -565,7 +565,7 @@
       "category": "dish",
       "name": "ساید اسپایسی",
       "description": "مرغ، پوره سیب زمینی، هالوپینو، دورچین",
-      "image": "",
+      "image": "./assets/images/sidespicey.jpg",
       "available": true,
       "prices": [
         {
