@@ -747,7 +747,7 @@
       "category": "hotdr",
       "name": "میکس چاکلت",
       "description": "",
-      "image": "",
+      "image": "./assets/images/mix-chocolate.jpg",
       "available": true,
       "prices": [
         {
@@ -1196,7 +1196,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-msbrk8hq-qud4b.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
