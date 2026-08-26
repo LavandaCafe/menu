@@ -452,7 +452,7 @@
       "id": "mangrape",
       "category": "colddr",
       "name": "مانگریپ",
-      "description": "انبه، پرتقال تو سرخ، پیناکولادا",
+      "description": "سیروپ انبه، پرتقال، آب لیمو، سودا، نکتار پرتقال تو سرخ، پیناکولادا",
       "image": "./assets/images/mangrape.png",
       "available": false,
       "prices": [
@@ -627,34 +627,6 @@
         {
           "label": "",
           "price": 390
-        }
-      ]
-    },
-    {
-      "id": "item-msgmj3ze-6fzzr",
-      "name": "کیک کرم لوتوس",
-      "category": "cake",
-      "description": "",
-      "image": "./assets/images/item-msgmj3ze-6fzzr.jpg",
-      "available": false,
-      "prices": [
-        {
-          "label": "",
-          "price": 290
-        }
-      ]
-    },
-    {
-      "id": "rafa-cake",
-      "category": "cake",
-      "name": "کیک رافائلو",
-      "description": "",
-      "image": "./assets/images/rafa.jpg",
-      "available": false,
-      "prices": [
-        {
-          "label": "",
-          "price": 270
         }
       ]
     },
