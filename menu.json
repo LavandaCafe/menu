@@ -454,7 +454,7 @@
       "name": "مانگریپ",
       "description": "سیروپ انبه، پرتقال، آب لیمو، سودا، نکتار پرتقال تو سرخ، پیناکولادا",
       "image": "./assets/images/mangrape.png",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
