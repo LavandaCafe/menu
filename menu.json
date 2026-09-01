@@ -589,6 +589,20 @@
       ]
     },
     {
+      "id": "item-mtitdz78-9jky8",
+      "name": "کیک هویج و گردو",
+      "category": "cake",
+      "description": "۱ اسکوپ بستنی، سس شکلات",
+      "image": "",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 270
+        }
+      ]
+    },
+    {
       "id": "day-cheese-cake",
       "category": "cake",
       "name": "چیزکیک سن سباستین",
