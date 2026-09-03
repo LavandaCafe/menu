@@ -183,6 +183,20 @@
       ]
     },
     {
+      "id": "item-mtlt09lm-q92mj",
+      "name": "ماچا",
+      "category": "hotdr",
+      "description": "• سرشار از آنتی‌اکسیدان\n• کمک به افزایش انرژی و تمرکز\n• حاوی کافئین طبیعی\n• کمک به شادابی و کاهش خستگی\n• منبعی از ترکیبات گیاهی مفید",
+      "image": "",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 270
+        }
+      ]
+    },
+    {
       "id": "hot-lotus",
       "category": "hotdr",
       "name": "هات لوتوس",
@@ -673,16 +687,16 @@
       ]
     },
     {
-      "id": "item-mtlt09lm-q92mj",
-      "name": "ماچا",
+      "id": "item-mtlt8e3w-o4y1k",
+      "name": "ماچا توت فرنگی",
       "category": "hotdr",
-      "description": "• سرشار از آنتی‌اکسیدان\n• کمک به افزایش انرژی و تمرکز\n• حاوی کافئین طبیعی\n• کمک به شادابی و کاهش خستگی\n• منبعی از ترکیبات گیاهی مفید",
+      "description": "",
       "image": "",
       "available": true,
       "prices": [
         {
           "label": "",
-          "price": 270
+          "price": 320
         }
       ]
     }
