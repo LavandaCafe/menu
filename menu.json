@@ -631,6 +631,48 @@
       ]
     },
     {
+      "id": "item-mtna8sna-iir1g",
+      "name": "کروسان شکلاتی",
+      "category": "cake",
+      "description": "",
+      "image": "./assets/images/item-mtna8sna-iir1g.jpg",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 190
+        }
+      ]
+    },
+    {
+      "id": "item-mtna7im7-s7bg8",
+      "name": "نیویورک رول شکلاتی",
+      "category": "cake",
+      "description": "",
+      "image": "./assets/images/item-mtna7im7-s7bg8.jpg",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 290
+        }
+      ]
+    },
+    {
+      "id": "item-mtna87fq-xg1ry",
+      "name": "سوپریم دوبی چاکلت",
+      "category": "cake",
+      "description": "",
+      "image": "./assets/images/item-mtna87fq-xg1ry.jpg",
+      "available": true,
+      "prices": [
+        {
+          "label": "",
+          "price": 320
+        }
+      ]
+    },
+    {
       "id": "item-msbrk8hq-qud4b",
       "name": "کیک تیرامیسو",
       "category": "cake",
@@ -701,20 +743,6 @@
       ]
     },
     {
-      "id": "day-cake",
-      "category": "cake",
-      "name": "کیک شکلاتی",
-      "description": "",
-      "image": "./assets/images/day-cake.jpg",
-      "available": false,
-      "prices": [
-        {
-          "label": "",
-          "price": 270
-        }
-      ]
-    },
-    {
       "id": "item-msc2alb6-fzedh",
       "name": "آفوگاتو لوتوس",
       "category": "coldCoffee",
@@ -781,6 +809,20 @@
         {
           "label": "",
           "price": 350
+        }
+      ]
+    },
+    {
+      "id": "day-cake",
+      "category": "cake",
+      "name": "کیک شکلاتی",
+      "description": "",
+      "image": "./assets/images/day-cake.jpg",
+      "available": false,
+      "prices": [
+        {
+          "label": "",
+          "price": 270
         }
       ]
     }
