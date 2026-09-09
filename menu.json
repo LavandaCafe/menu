@@ -636,7 +636,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-mtna8sna-iir1g.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -650,7 +650,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-mtna7im7-s7bg8.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -664,7 +664,7 @@
       "category": "cake",
       "description": "",
       "image": "./assets/images/item-mtna87fq-xg1ry.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
@@ -676,7 +676,7 @@
       "id": "item-msbrk8hq-qud4b",
       "name": "کیک تیرامیسو",
       "category": "cake",
-      "description": "",
+      "description": "+ سس شکلات",
       "image": "./assets/images/item-msbrk8hq-qud4b.jpg",
       "available": true,
       "prices": [
