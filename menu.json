@@ -706,7 +706,7 @@
       "name": "چیزکیک سن سباستین",
       "description": "",
       "image": "./assets/images/day-cheese-cake.jpg",
-      "available": false,
+      "available": true,
       "prices": [
         {
           "label": "",
