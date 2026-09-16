@@ -59,7 +59,7 @@
     {
       "id": "latte",
       "category": "espresso",
-      "name": "لته",
+      "name": "لاته",
       "description": "",
       "image": "./assets/images/latte.jpg",
       "available": true,
@@ -108,7 +108,7 @@
       "prices": [
         {
           "label": "",
-          "price": 140
+          "price": 150
         }
       ]
     },
@@ -122,7 +122,7 @@
       "prices": [
         {
           "label": "",
-          "price": 220
+          "price": 230
         }
       ]
     },
@@ -136,7 +136,7 @@
       "prices": [
         {
           "label": "",
-          "price": 220
+          "price": 230
         }
       ]
     },
@@ -150,7 +150,7 @@
       "prices": [
         {
           "label": "",
-          "price": 220
+          "price": 230
         }
       ]
     },
@@ -164,7 +164,7 @@
       "prices": [
         {
           "label": "",
-          "price": 240
+          "price": 250
         }
       ]
     },
@@ -178,7 +178,7 @@
       "prices": [
         {
           "label": "",
-          "price": 270
+          "price": 280
         }
       ]
     },
@@ -192,7 +192,7 @@
       "prices": [
         {
           "label": "",
-          "price": 270
+          "price": 280
         }
       ]
     },
@@ -206,7 +206,7 @@
       "prices": [
         {
           "label": "",
-          "price": 230
+          "price": 220
         }
       ]
     },
@@ -290,7 +290,7 @@
       "prices": [
         {
           "label": "",
-          "price": 130
+          "price": 150
         }
       ]
     },
@@ -318,21 +318,21 @@
       "prices": [
         {
           "label": "",
-          "price": 125
+          "price": 155
         }
       ]
     },
     {
       "id": "ice-latte",
       "category": "coldCoffee",
-      "name": "آیس لته",
+      "name": "آیس لاته",
       "description": "کارامل، فندق، وانیل، دارچین، نارگیل و ...",
       "image": "./assets/images/iceLatte.png",
       "available": true,
       "prices": [
         {
           "label": "",
-          "price": 235
+          "price": 245
         }
       ]
     },
@@ -346,7 +346,7 @@
       "prices": [
         {
           "label": "",
-          "price": 280
+          "price": 260
         }
       ]
     },
@@ -367,7 +367,7 @@
     {
       "id": "ice-lat-berry",
       "category": "coldCoffee",
-      "name": "آیس لته توت فرنگی",
+      "name": "آیس لاته توت فرنگی",
       "description": "",
       "image": "./assets/images/icestraw.jpg",
       "available": true,
@@ -402,7 +402,7 @@
       "prices": [
         {
           "label": "",
-          "price": 260
+          "price": 255
         }
       ]
     },
@@ -472,7 +472,7 @@
       "prices": [
         {
           "label": "",
-          "price": 250
+          "price": 240
         }
       ]
     },
@@ -528,7 +528,7 @@
       "prices": [
         {
           "label": "",
-          "price": 250
+          "price": 260
         }
       ]
     },
@@ -542,7 +542,7 @@
       "prices": [
         {
           "label": "",
-          "price": 260
+          "price": 290
         }
       ]
     },
@@ -556,7 +556,7 @@
       "prices": [
         {
           "label": "",
-          "price": 320
+          "price": 350
         }
       ]
     },
@@ -570,7 +570,7 @@
       "prices": [
         {
           "label": "",
-          "price": 330
+          "price": 350
         }
       ]
     },
@@ -598,7 +598,7 @@
       "prices": [
         {
           "label": "",
-          "price": 300
+          "price": 330
         }
       ]
     },
@@ -612,7 +612,7 @@
       "prices": [
         {
           "label": "",
-          "price": 310
+          "price": 330
         }
       ]
     },
@@ -696,7 +696,7 @@
       "prices": [
         {
           "label": "",
-          "price": 270
+          "price": 190
         }
       ]
     },
